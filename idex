@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E.E.A.C Pain de Vie | Accueil</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- STYLE CSS --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body { line-height: 1.6; color: #333; overflow-x: hidden; background-color: #f4f4f4; }
+
+        /* Navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 10vh;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { color: #2c3e50; text-transform: uppercase; letter-spacing: 2px; font-weight: bold; }
+        .logo span { color: #e67e22; }
+
+        .nav-links { display: flex; justify-content: space-around; width: 40%; list-style: none; }
+        .nav-links a { color: #2c3e50; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        .nav-links a:hover { color: #e67e22; }
+
+        /* Hero Section - Utilisation de l'image du Pasteur Obed */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('images/Pasteur Obed Kahozi.jpeg') center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+
+        /* Galerie Photos */
+        .gallery { padding: 50px 20px; background: #fff; }
+        .gallery h2 { text-align: center; margin-bottom: 40px; color: #2c3e50; }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item:hover { transform: scale(1.05); }
+
+        /* Sections */
+        section { padding: 60px 20px; text-align: center; }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .service-card { padding: 30px; background: #fff; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .service-card i { font-size: 2.5rem; color: #e67e22; margin-bottom: 15px; }
+
+        footer { background: #2c3e50; color: white; padding: 40px; text-align: center; }
+
+        /* Mobile */
+        .burger { display: none; cursor: pointer; }
+        @media screen and (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">E.E.A.C <span>Pain de Vie</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#gallery">Galerie</a></li>
+            <li><a href="#ministries">Ministères</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenue à l'Église Pain de Vie</h1>
+            <p>Sous la direction du Pasteur Obed Kahozi</p>
+            <a href="#contact" style="background:#e67e22; color:white; padding:10px 25px; text-decoration:none; border-radius:5px; display:inline-block; margin-top:20px;">Nous rejoindre</a>
+        </div>
+    </header>
+
+    <section id="gallery" class="gallery">
+        <h2>Moments de Culte & Communion</h2>
+        <div class="gallery-grid">
+            <img src="images/Pasteur Obed Kahozi en train de precher.jpeg" class="gallery-item" alt="Prédication">
+            <img src="images/Pasteur Obed Kahozi en train de precher1.jpeg" class="gallery-item" alt="Prédication">
+            <img src="images/Seance de cilte 1.jpeg" class="gallery-item" alt="Culte">
+            <img src="images/Seance de cilte 2.jpeg" class="gallery-item" alt="Culte">
+            <img src="images/Seance de cilte 3.jpeg" class="gallery-item" alt="Culte">
+            <img src="images/Seance de cilte 4.jpeg" class="gallery-item" alt="Culte">
+            <img src="images/Seance de cilte 5.jpeg" class="gallery-item" alt="Culte">
+            <img src="images/Seance de cilte 8.jpeg" class="gallery-item" alt="Culte">
+        </div>
+    </section>
+
+    <section id="ministries" class="services">
+        <h2>Nos Ministères</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-bible"></i>
+                <h3>Étude Biblique</h3>
+                <p>Mardi : 17h00 - 19h00</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-hands-helping"></i>
+                <h3>Intercession</h3>
+                <p>Jeudi : 16h30 - 18h30</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-church"></i>
+                <h3>Culte Dominical</h3>
+                <p>Dimanche : 08h30 - 12h00</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2026 E.E.A.C Pain de Vie - Pasteur Obed Kahozi</p>
+    </footer>
+
+    <script>
+        // Scroll fluide
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
